@@ -70,4 +70,5 @@ for i in re:
 
 for i in unposted:
     embed_to_discord(i)
-df.to_csv("data.csv", index=False)
+
+pd.json_normalize(re).to_csv("data.csv", index=False)
