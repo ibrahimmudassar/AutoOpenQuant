@@ -71,4 +71,5 @@ for i in re:
 for i in unposted:
     embed_to_discord(i)
 
-pd.json_normalize(re).to_csv("data.csv", index=False)
+if len(pd.json_normalize(re)) > 0:
+    pd.json_normalize(re).to_csv("data.csv", index=False)
