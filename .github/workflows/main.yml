@@ -40,5 +40,10 @@ jobs:
           git commit -m "GitHub Actions Bot"
           git push
 
-      - name: Keepalive Workflow
-        uses: gautamkrishnar/keepalive-workflow@1.1.0
+  workflow-keepalive:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - uses: liskin/gh-workflow-keepalive@v1
