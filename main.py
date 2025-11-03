@@ -55,7 +55,7 @@ def embed_to_discord(data):
         webhook.execute()
 
 
-re = httpx.get("https://openquant.co/?level=Internship")
+re = httpx.get("https://openquant.co/?level=Entry%20Level")
 soup = BeautifulSoup(re.content, "html.parser")
 re = json.loads(soup.find("script", id="__NEXT_DATA__").get_text())["props"][
     "pageProps"
